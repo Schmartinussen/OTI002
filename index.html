@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Assignment</title>
+<style>
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  h1 { font-size: 28px; margin: 0 0 24px; }
+  a.button {
+    display: block;
+    width: 280px;
+    margin: 10px auto;
+    padding: 18px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    background: #1a5fb4;
+    border-radius: 10px;
+  }
+  a.button.dictionary { background: #a51d2d; }
+  a.button:hover { filter: brightness(1.1); }
+  p { color: #555; max-width: 380px; margin: 24px auto 0; line-height: 1.5; }
+</style>
+</head>
+<body>
+  <h1>English Assignment</h1>
+  <a id="task" class="button" target="_blank"
+     href="https://cryptpad.fr/form/#/2/form/view/eO5ihba2CF+ItUYuEx30LwS-BOiNYVKEvkKP0+Verq4/">Open the assignment</a>
+  <a class="button dictionary" target="_blank" href="https://lexin.oslomet.no/#/">Open LEXIN dictionary</a>
+  <p>Each button opens in its own window. Use the bar at the bottom of the screen to switch between windows.</p>
+<script>
+  // Optional: a different assignment link can be given in the address, e.g. ?task=<link>
+  var t = new URLSearchParams(location.search).get("task");
+  if (t && /^https:\/\/cryptpad\.fr\//.test(t)) document.getElementById("task").href = t;
+</script>
+</body>
+</html>
