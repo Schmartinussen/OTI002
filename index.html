@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OTI 002: Gin Lane</title>
+<title>English Assignment</title>
 <style>
   body {
     font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -35,15 +35,18 @@
 </style>
 </head>
 <body>
-  <h1>OTI002: Gin Lane</h1>
+  <h1>English Assignment</h1>
   <a id="task" class="button" target="_blank"
      href="https://cryptpad.fr/form/#/2/form/view/eO5ihba2CF+ItUYuEx30LwS-BOiNYVKEvkKP0+Verq4/">Open the assignment</a>
   <a class="button dictionary" target="_blank" href="https://lexin.oslomet.no/#/">Open LEXIN dictionary</a>
   <p>Each button opens in its own window. Use the bar at the bottom of the screen to switch between windows.</p>
 <script>
-  // Optional: a different assignment link can be given in the address, e.g. ?task=<link>
-  var t = new URLSearchParams(location.search).get("task");
+  // The address can set the assignment link and the title, e.g. ?title=OTI003: Wright&task=<link>
+  var q = new URLSearchParams(location.search);
+  var t = q.get("task");
   if (t && /^https:\/\/cryptpad\.fr\//.test(t)) document.getElementById("task").href = t;
+  var title = q.get("title");
+  if (title) { document.title = title; document.querySelector("h1").textContent = title; }
 </script>
 </body>
 </html>
